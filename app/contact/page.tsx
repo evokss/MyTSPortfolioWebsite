@@ -3,7 +3,7 @@ import ContactPage from "../../components/contact/ContactPage";
 import Navbar from "../../components/common/NavBar";
 import StarryBackground from "@/components/background/StarryBackground";
 
-const page = () => {
+const Page: React.FC = () => {
   return (
     <>
       <Navbar />
@@ -14,4 +14,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
