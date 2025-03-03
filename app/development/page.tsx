@@ -1,8 +1,8 @@
 import React from "react";
 import DevelopmentPage from "../../components/development/DevelopmentPage";
 
-const page = () => {
+const Page: React.FC = () => {
   return <DevelopmentPage />;
 };
 
-export default page;
+export default Page;
