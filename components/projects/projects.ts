@@ -1,4 +1,16 @@
-export const projects = [
+// Define the type for a project object
+export interface Project {
+  id: number;
+  name: string;
+  description: string;
+  technologies: string[];
+  githubLink: string;
+  deployLink: string;
+  imageUrl: string;
+}
+
+// Define the array with explicit typing
+export const projects: Project[] = [
   {
     id: 1,
     name: "My Fav Videos",
