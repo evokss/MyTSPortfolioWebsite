@@ -3,7 +3,7 @@ import Image from "next/image";
 import { TbClick } from "react-icons/tb";
 import Link from "next/link";
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-14 gap-0 items-center mx-auto px-4 sm:px-6 lg:px-8 lg:-mt-10">
       {/* Left column: Text, link, and button */}
