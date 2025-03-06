@@ -1,12 +1,13 @@
-# Welcome to my personal portfolio repository! 🎉
+# Welcome to my personal portfolio repository v.2! 🎉
 
-**Deploy**: [LINK](https://portfolio-website-evokss.vercel.app/)
+**Deploy**: [LINK](https://my-ts-portfolio-website.vercel.app/)
 
 This website serves as a showcase of my work, featuring a collection of personal projects, documentation, and applications built using the technologies I love and use daily. It’s a platform where you can learn more about me, explore my skills, and see the results of my passion for web development.
 
 ## Purpose
 This portfolio is not just a display of my work but also a testament to my proficiency in modern web development technologies, including:
 
+- TypeScript
 - Next.js
 - React
 - TailwindCSS
@@ -28,12 +29,12 @@ Follow these steps to set up the project locally:
 
 1. Clone the Repository: </br>
 ```bash
-git clone https://github.com/evokss/MyPortfolioWebsite.git
+git clone https://github.com/evokss/MyTSPortfolioWebsite.git
 ```
 
 2. Navigate to the Project Folder: </br>
 ```bash
-cd MyPortfolioWebsite
+cd MyTSPortfolioWebsite
 ```
 
 4. Install Dependencies: </br>
