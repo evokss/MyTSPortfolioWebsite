@@ -5,7 +5,7 @@ export interface Project {
   description: string;
   technologies: string[];
   githubLink: string;
-  deployLink: string;
+  deployLink?: string;
   imageUrl: string;
 }
 
