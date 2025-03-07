@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
-import { projects } from "./projects";
+import { projects, Project } from "./projectsData";
 import ProjectCard from "@/components/projects/ProjectCard";
 
 // Main Projects Showcase Page
-const ProjectsShowcase = () => {
+const ProjectsShowcase: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 dark:bg-transparent dark:text-white">
       <div className="max-w-7xl mx-auto">
@@ -27,7 +27,7 @@ const ProjectsShowcase = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects.map((project: Project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
