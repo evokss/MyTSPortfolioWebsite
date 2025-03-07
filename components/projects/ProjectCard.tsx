@@ -1,9 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { Project } from "./projectsData";
+
+// Define props interface for the component
+interface ProjectCardProps {
+  project: Project;
+}
 
 //ProjectCard Component
-const ProjectCard = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:border-orange-300 hover:bg-orange-50 dark:hover:border-rose-600 dark:bg-gray-900 dark:hover:bg-gray-900 dark:text-white border-2 border-orange-400 group">
       <div className="flex justify-center pb-6">
