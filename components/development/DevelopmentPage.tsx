@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Navbar from "../common/NavBar";
 
-export default function DevelopmentPage() {
+const DevelopmentPage: React.FC = () => {
   return (
     <div>
       <div>
@@ -30,4 +30,6 @@ export default function DevelopmentPage() {
       </div>
     </div>
   );
-}
+};
+
+export default DevelopmentPage;
