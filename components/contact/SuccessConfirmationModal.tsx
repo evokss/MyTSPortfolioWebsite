@@ -1,6 +1,14 @@
 import React from "react";
 
-const SuccessModal = ({ onClose }) => {
+interface SuccessConfirmationModalProps {
+  onClose: () => void;
+  message?: string;
+}
+
+const SuccessConfirmationModal: React.FC<SuccessConfirmationModalProps> = ({ 
+  onClose,
+  message = "Thank you for reaching out! I'll get back to you as soon as possible."
+}) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full">
@@ -23,8 +31,7 @@ const SuccessModal = ({ onClose }) => {
             Message Sent Successfully!
           </h3>
           <p className="text-gray-600 mb-6">
-            Thank you for reaching out! I&apos;ll get back to you as soon as
-            possible.
+            {message}
           </p>
           <button
             onClick={onClose}
@@ -38,4 +45,4 @@ const SuccessModal = ({ onClose }) => {
   );
 };
 
-export default SuccessModal;
+export default SuccessConfirmationModal;
