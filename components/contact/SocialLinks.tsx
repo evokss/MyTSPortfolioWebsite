@@ -1,7 +1,13 @@
 import React from "react";
 
-const SocialLinks = () => {
-  const socialLinks = [
+interface SocialLink {
+  icon: React.ReactNode;
+  name: string;
+  link: string;
+}
+
+const SocialLinks: React.FC = () => {
+  const socialLinks: SocialLink[] = [
     {
       icon: <img src="/icons/gmail.png" className="w-8 h-8" alt="Gmail icon" />,
       name: "Gmail",
@@ -16,7 +22,7 @@ const SocialLinks = () => {
         />
       ),
       name: "Telegram",
-      link: "https://t.me/evokss",
+      link: "https://t.me/evkosse",
     },
     {
       icon: (
