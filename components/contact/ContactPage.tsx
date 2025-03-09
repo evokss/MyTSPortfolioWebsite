@@ -1,23 +1,37 @@
 "use client";
 
-import React, { useState } from "react";
-import SuccessModal from "./SuccessModal";
+import React, { useState, ChangeEvent, FormEvent } from "react";
+import SuccessConfirmationModal from "./SuccessConfirmationModal";
 import SocialLinks from "./SocialLinks";
 import { submitForm } from "@/utils/formSubmission";
 
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
+// Define interface for form data
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+// Define interface for submission status
+interface SubmissionStatus {
+  isLoading: boolean;
+  isSuccess: boolean;
+  error: string | null;
+}
+
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
-  const [submissionStatus, setSubmissionStatus] = useState({
+  const [submissionStatus, setSubmissionStatus] = useState<SubmissionStatus>({
     isLoading: false,
     isSuccess: false,
     error: null,
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -25,7 +39,7 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Reset submission status
@@ -54,12 +68,12 @@ const ContactPage = () => {
       setSubmissionStatus({
         isLoading: false,
         isSuccess: false,
-        error: result.error,
+        error: result.error ?? null,  // Convert undefined to null
       });
     }
   };
 
-  const closeSuccessModal = () => {
+  const closeSuccessConfirmationModal = () => {
     setSubmissionStatus((prev) => ({
       ...prev,
       isSuccess: false,
@@ -68,9 +82,9 @@ const ContactPage = () => {
 
   return (
     <>
-      {/* Success Modal */}
+      {/* Success Confirmatio Modal */}
       {submissionStatus.isSuccess && (
-        <SuccessModal onClose={closeSuccessModal} />
+        <SuccessConfirmationModal onClose={closeSuccessConfirmationModal} />
       )}
 
       <div className="min-h-screen bg-slate-50 flex items-center justify-center px-8 py-16 dark:bg-transparent dark:text-white">
