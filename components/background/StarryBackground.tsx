@@ -1,9 +1,21 @@
-import React, { useMemo } from "react";
-import { generateStars } from "./utils";
+import React, { useMemo, ReactNode } from "react";
+import { generateStars, Star } from "./starGenerator";
 
-export default function StarryBackground({ children, starCount = 100 }) {
+interface StarryBackgroundProps {
+  /** The content to be displayed on top of the starry background */
+  children: ReactNode;
+  /** Number of stars to generate (default: 100) */
+  starCount?: number;
+}
+
+/**
+ * A component that renders a starry background with content centered on top
+ * @param props - Component properties
+ * @returns A React component with a starry background
+ */
+export default function StarryBackground({ children, starCount = 100 }: StarryBackgroundProps): React.ReactElement {
   // Use useMemo to ensure consistent star generation
-  const stars = useMemo(() => generateStars(starCount), [starCount]);
+  const stars: Star[] = useMemo(() => generateStars(starCount), [starCount]);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
