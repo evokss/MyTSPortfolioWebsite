@@ -6,138 +6,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-// Define types for our component props and state
-type Theme = "light" | "dark";
-type NavItem = {
-  href: string;
-  label: string;
-};
+// Import components
+import NavLink from "./core/NavLink";
+import ThemeToggle from "./core/ThemeToggle";
+import MobileMenu from "./core/MobileMenu";
 
-// Navigation items configuration
-const NAV_ITEMS: NavItem[] = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact Me" },
-];
+// Import hooks and utilities
+import useTheme from "./hooks/useTheme";
+import { NAV_ITEMS } from "./utils/constants";
 
-// Custom hook for theme management
-const useTheme = (): {
-  theme: Theme;
-  toggleTheme: () => void;
-  isMounted: boolean;
-} => {
-  const [theme, setTheme] = useState<Theme>("dark");
-  const [isMounted, setIsMounted] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-    
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme") as Theme || "dark";
-      setTheme(savedTheme);
-      
-      if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isMounted) {
-      theme === "dark"
-        ? document.body.classList.add("dark")
-        : document.body.classList.remove("dark");
-    }
-  }, [theme, isMounted]);
-
-  const toggleTheme = useCallback(() => {
-    const newTheme: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", newTheme);
-    }
-  }, [theme]);
-
-  return { theme, toggleTheme, isMounted };
-};
-
-// NavLink component for consistent styling
-interface NavLinkProps {
-  href: string;
-  children: React.ReactNode;
-  isMobile?: boolean;
-  onClick?: () => void;
-}
-
-const NavLink: React.FC<NavLinkProps> = ({ 
-  href, 
-  children, 
-  isMobile = false,
-  onClick 
-}) => {
-  const pathname = usePathname();
-  const isActive = pathname === href;
-  
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className={`
-        ${isMobile ? "text-2xl font-semibold" : ""}
-        ${
-          isActive 
-            ? "text-rose-600" 
-            : "text-gray-800 dark:text-white hover:text-rose-600 transition duration-300"
-        }
-      `}
-    >
-      {children}
-    </Link>
-  );
-};
-
-// ThemeToggle component
-interface ThemeToggleProps {
-  theme: Theme;
-  toggleTheme: () => void;
-  className?: string;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ 
-  theme, 
-  toggleTheme,
-  className = ""
-}) => {
-  return (
-    <button
-      onClick={toggleTheme}
-      className={`focus:outline-none ${className}`}
-      aria-label={`Toggle ${theme === 'light' ? 'dark' : 'light'} mode`}
-    >
-      {theme === "light" ? (
-        <Image
-          src="/icons/moon.png"
-          width={24}
-          height={24}
-          className="transition ease-in-out delay-125 hover:scale-125 cursor-pointer"
-          alt="Toggle Dark Mode"
-        />
-      ) : (
-        <Image
-          src="/icons/sun.png"
-          width={24}
-          height={24}
-          className="transition ease-in-out delay-125 hover:scale-125 cursor-pointer"
-          alt="Toggle Light Mode"
-        />
-      )}
-    </button>
-  );
-};
-
-// Main Navbar component
 const Navbar: React.FC = () => {
   const { theme, toggleTheme, isMounted } = useTheme();
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -233,25 +110,11 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Links */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 z-40 bg-white dark:bg-gray-900 flex flex-col items-center justify-center space-y-6"
-          role="dialog"
-          aria-modal="true"
-        >
-          {NAV_ITEMS.map((item) => (
-            <NavLink 
-              key={`mobile-${item.href}`} 
-              href={item.href} 
-              isMobile={true}
-              onClick={closeMenu}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-        </div>
-      )}
+      <MobileMenu 
+        isOpen={isOpen} 
+        navItems={NAV_ITEMS} 
+        onClose={closeMenu} 
+      />
     </nav>
   );
 };
