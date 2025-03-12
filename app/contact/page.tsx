@@ -1,6 +1,6 @@
 import React from "react";
 import ContactPage from "../../components/contact/ContactPage";
-import Navbar from "../../components/common/NavBar";
+import Navbar from "../../components/navigation/NavBar";
 import StarryBackground from "@/components/background/StarryBackground";
 
 const Page: React.FC = () => {

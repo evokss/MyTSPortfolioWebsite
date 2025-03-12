@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Navbar from "../common/NavBar";
+import Navbar from "../navigation/NavBar";
 
 const DevelopmentPage: React.FC = () => {
   return (
