@@ -1,7 +1,8 @@
 import React from "react";
+import Image from "next/image";
 
 interface SocialLink {
-  icon: React.ReactNode;
+  imageSrc: string;
   name: string;
   link: string;
 }
@@ -9,36 +10,22 @@ interface SocialLink {
 const SocialLinks: React.FC = () => {
   const socialLinks: SocialLink[] = [
     {
-      icon: <img src="/icons/gmail.png" className="w-8 h-8" alt="Gmail icon" />,
+      imageSrc: "/icons/gmail.png",
       name: "Gmail",
       link: "mailto:ekoss.prog@gmail.com",
     },
     {
-      icon: (
-        <img
-          src="/icons/telegram.png"
-          className="w-8 h-8"
-          alt="Telegram icon"
-        />
-      ),
+      imageSrc: "/icons/telegram.png",
       name: "Telegram",
       link: "https://t.me/evkosse",
     },
     {
-      icon: (
-        <img
-          src="/icons/linkedin.png"
-          className="w-8 h-8"
-          alt="LinkedIn icon"
-        />
-      ),
+      imageSrc: "/icons/linkedin.png",
       name: "LinkedIn",
       link: "https://www.linkedin.com/in/evakoss/",
     },
     {
-      icon: (
-        <img src="/icons/github.png" className="w-8 h-8" alt="GitHub icon" />
-      ),
+      imageSrc: "/icons/github.png",
       name: "GitHub",
       link: "https://github.com/evokss",
     },
@@ -54,7 +41,16 @@ const SocialLinks: React.FC = () => {
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center hover:scale-110 transition duration-300 ease-in-out"
         >
-          {social.icon}
+          <div className="relative w-8 h-8">
+            <Image
+              src={social.imageSrc}
+              alt={`${social.name} icon`}
+              fill
+              sizes="2rem"
+              className="object-contain"
+              priority={index < 2} // Load first two icons with priority
+            />
+          </div>
           <span className="mt-2 text-sm">{social.name}</span>
         </a>
       ))}
