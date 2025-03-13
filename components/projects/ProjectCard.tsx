@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { Project } from "./projectsData";
 
@@ -12,8 +13,15 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 overflow-hidden transform transition-all duration-300 hover:scale-105 hover:border-orange-300 hover:bg-orange-50 dark:hover:border-rose-600 dark:bg-gray-900 dark:hover:bg-gray-900 dark:text-white border-2 border-orange-400 group">
-      <div className="flex justify-center pb-6">
-        <img src={project.imageUrl} alt={project.name} className="h-28" />
+      <div className="flex justify-center mb-6 relative h-28">
+      <Image
+          src={project.imageUrl}
+          alt={project.name}
+          fill
+          sizes="(max-width: 768px) 100vw, 112px"
+          objectFit="contain"
+          priority={false}
+        />
       </div>
       <h3 className="text-xl font-bold text-orange-400 mb-2">{project.name}</h3>
       <p className="text-gray-600 mb-4 dark:group-hover:text-gray-400 transition-colors duration-300">
