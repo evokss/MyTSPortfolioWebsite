@@ -130,7 +130,8 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "postcss.config.ts"
   ],
   "exclude": [
     "node_modules"
