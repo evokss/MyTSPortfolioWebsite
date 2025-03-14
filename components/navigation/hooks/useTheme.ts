@@ -8,34 +8,30 @@ export const useTheme = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const savedTheme = localStorage.getItem("theme");
+    const initialTheme: Theme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+    setTheme(initialTheme);
+    document.body.classList.toggle("dark", initialTheme === "dark");
     setIsMounted(true);
-    
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme") as Theme || "dark";
-      setTheme(savedTheme);
-      
-      if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-      }
-    }
   }, []);
 
   useEffect(() => {
-    if (isMounted) {
-      theme === "dark"
-        ? document.body.classList.add("dark")
-        : document.body.classList.remove("dark");
-    }
+    if (!isMounted || typeof window === "undefined") return;
+
+    document.body.classList.toggle("dark", theme === "dark");
   }, [theme, isMounted]);
 
   const toggleTheme = useCallback(() => {
-    const newTheme: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", newTheme);
-    }
-  }, [theme]);
+    setTheme((prevTheme) => {
+      const newTheme: Theme = prevTheme === "dark" ? "light" : "dark";
+      if (typeof window !== "undefined") {
+        localStorage.setItem("theme", newTheme);
+      }
+      return newTheme;
+    });
+  }, []);
 
   return { theme, toggleTheme, isMounted };
 };
