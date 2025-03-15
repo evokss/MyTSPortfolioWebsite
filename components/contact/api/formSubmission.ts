@@ -26,9 +26,10 @@ export const submitForm = async (formData: FormData): Promise<SubmissionResponse
       throw new Error("Submission failed");
     }
   } catch (error) {
+      console.error("Form submission error:", error); // Log the error to use the variable
     return {
       success: false,
-      error: "Failed to send message. Please try again.",
+      error: error instanceof Error ? error.message : "Failed to send message. Please try again.",
     };
   }
 }; 
