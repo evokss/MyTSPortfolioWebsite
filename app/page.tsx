@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Navbar from "../components/navigation/NavBar";
+import { Navbar } from "@/components/navigation";
 import HomePage from "../components/home/HomePage";
 import StarryBackground from "../components/background/StarryBackground";
 
