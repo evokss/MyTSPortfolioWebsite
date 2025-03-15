@@ -1,4 +1,15 @@
-export const submitForm = async (formData) => {
+export interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface SubmissionResponse {
+  success: boolean;
+  error?: string;
+}
+
+export const submitForm = async (formData: FormData): Promise<SubmissionResponse> => {
   try {
     const response = await fetch("https://formspree.io/f/mldekqgd", {
       method: "POST",
@@ -20,4 +31,4 @@ export const submitForm = async (formData) => {
       error: "Failed to send message. Please try again.",
     };
   }
-};
+}; 
