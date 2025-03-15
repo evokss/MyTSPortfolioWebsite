@@ -1,9 +1,13 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import SuccessConfirmationModal from "./SuccessConfirmationModal";
-import SocialLinks from "./SocialLinks";
-import { submitForm } from "@/utils/formSubmission";
+
+// Import components
+import SuccessConfirmationModal from "./core/SuccessConfirmationModal";
+import SocialLinks from "./core/SocialLinks";
+
+// Import the function responsible for submitting form data to an external API  
+import { submitForm } from "./api/formSubmission";
 
 // Define interface for form data
 interface FormData {
