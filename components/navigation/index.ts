@@ -1,5 +1,5 @@
 // Main component
-export { default as Navbar } from './NavBar';
+export { default as Navbar } from './Navbar';
 
 // Core components
 export { default as NavLink } from './core/NavLink';
