@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           alt={project.name}
           fill
           sizes="(max-width: 768px) 100vw, 112px"
-          objectFit="contain"
+          style={{ objectFit: 'contain' }}
           priority={false}
         />
       </div>
