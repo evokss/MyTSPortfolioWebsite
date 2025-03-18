@@ -1,4 +1,5 @@
 import "./styles/globals.css";
+import { Navbar } from "@/components/navigation";
 
 export const metadata = {
   title: "Eva's Development Space",
@@ -16,7 +17,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+      </body>
     </html>
   );
 }
