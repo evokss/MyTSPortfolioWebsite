@@ -60,6 +60,7 @@ const HomePage: React.FC = () => {
             height={400}
             quality={95}
             alt="Eva Koss"
+            priority
           />
         </Link>
       </div>
