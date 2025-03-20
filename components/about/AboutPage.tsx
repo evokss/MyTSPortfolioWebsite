@@ -10,35 +10,7 @@ import {
   PiFileCodeLight,
   PiDownloadSimple,
 } from "react-icons/pi";
-
-// Define interfaces for our data structures
-interface ExperienceItem {
-  id: number;
-  title: string;
-  company: string;
-  type?: string;
-  period: string;
-  description: string;
-  responsibilities: string[];
-  skills: string[];
-}
-
-interface EducationItem {
-  title: string;
-  institution: string;
-  period: string;
-  link?: string;
-}
-
-interface LanguageItem {
-  name: string;
-  level: string;
-}
-
-interface QuickFactItem {
-  icon: React.ReactNode;
-  text: string;
-}
+import { ExperienceItem, EducationItem, LanguageItem, QuickFactItem } from "./utils/types";
 
 const AboutPage: React.FC = () => {
   const [openSection, setOpenSection] = useState<number | null>(null);
