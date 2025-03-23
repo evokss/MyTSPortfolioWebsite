@@ -23,4 +23,4 @@ export const quickFacts: QuickFactItem[] = [
     icon: <PiHeartLight className="w-6 h-6 flex-shrink-0 dark:text-orange-400 text-rose-600" />,
     text: "Outside of IT: enthusiast of sports and an active lifestyle, strategic board gamer, avid multilingual reader",
   },
-]; 
+];
