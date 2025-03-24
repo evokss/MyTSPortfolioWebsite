@@ -9,6 +9,8 @@ import {
 } from "react-icons/pi";
 import { experiences, education, languages, skills } from "./utils/experienceData";
 import { quickFacts } from "./utils/quickFactsData";
+import PageHeading from "../ui/PageHeading";
+import MyStory from "./core/MyStory";
 
 const AboutPage: React.FC = () => {
   const [openSection, setOpenSection] = useState<number | null>(null);
@@ -21,9 +23,7 @@ const AboutPage: React.FC = () => {
     <div className="max-w-6xl mx-auto px-4 py-16">
       {/* Hero Section with Resume Download */}
       <div className="mb-16 text-center">
-        <h1 className="text-3xl font-extrabold sm:text-5xl md:text-6xl text-orange-400 mb-6 ">
-          About Me
-        </h1>
+        <PageHeading title="About Me" />
         <div className="max-w-3xl mx-auto mb-8">
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
             Frontend Developer with 6 years of development experience,
@@ -45,31 +45,7 @@ const AboutPage: React.FC = () => {
       </div>
 
       {/* My Story Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-orange-400">My Story</h2>
-        <div className="space-y-4">
-          <div className="bg-white border-2 border-orange-300 dark:bg-white/5 dark:border-rose-600 py-8 px-8 rounded-lg">
-            <ul className="list-disc marker:dark:text-rose-600 marker:text-orange-400 m-2 space-y-4 text-gray-600 dark:text-gray-400">
-              <li>
-                Throughout my academic journey and early career, I successfully
-                complete my first higher education in Computer Science, serve as
-                a Microsoft Student Partner, and participate in and win many
-                coding challenges (hackathons).
-              </li>
-              <li>
-                I consistently develop my own projects and contribute my skills
-                and knowledge to various projects with exceptional teams.
-              </li>
-              <li>
-                In my free time, I engage in open-source and freelance web
-                development projects, further fueling my love for crafting
-                exceptional web experiences and expanding my practical
-                knowledge.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <MyStory />
 
       {/* Quick Facts */}
       <section className="mb-16">
