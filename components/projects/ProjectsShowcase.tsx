@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
+import PageHeading from "../ui/PageHeading";
 import { projects, Project } from "./projectsData";
 import ProjectCard from "@/components/projects/ProjectCard";
 
@@ -11,10 +12,7 @@ const ProjectsShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Welcome Section */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl font-extrabold sm:text-5xl md:text-6xl text-orange-400 mb-6">
-            Welcome to My Project Gallery
-          </h1>
-
+          <PageHeading title="Welcome to My Project Gallery" />
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
             Here you&apos;ll find a collection of personal projects born from
             curiosity and creativity. While my professional work showcases
