@@ -6,8 +6,8 @@ import {
   PiGraduationCapLight,
   PiBookOpen,
 } from "react-icons/pi";
-import { experiences, education, languages, skills } from "./data/experienceData";
-import { quickFacts } from "./data/quickFactsData";
+import { experiences, education, languages, skills } from "./utils/experienceData";
+import { quickFacts } from "./utils/quickFactsData";
 import HeroSection from "./core/HeroSection";
 import MyStory from "./core/MyStory";
 import QuickFacts from "./core/QuickFacts";
