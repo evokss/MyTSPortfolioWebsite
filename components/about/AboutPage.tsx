@@ -6,10 +6,11 @@ import {
   PiGraduationCapLight,
   PiBookOpen,
 } from "react-icons/pi";
-import { experiences, education, languages, skills } from "./utils/experienceData";
-import { quickFacts } from "./utils/quickFactsData";
+import { experiences, education, languages, skills } from "./data/experienceData";
+import { quickFacts } from "./data/quickFactsData";
 import HeroSection from "./core/HeroSection";
 import MyStory from "./core/MyStory";
+import QuickFacts from "./core/QuickFacts";
 
 const AboutPage: React.FC = () => {
   const [openSection, setOpenSection] = useState<number | null>(null);
@@ -27,19 +28,7 @@ const AboutPage: React.FC = () => {
       <MyStory />
 
       {/* Quick Facts */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-orange-400">Quick Facts</h2>
-        <div className="grid md:grid-cols-2 gap-6 text-gray-800 dark:text-gray-400">
-          {quickFacts.map((fact, index) => (
-            <div key={index} className="bg-white/5 p-6 rounded-lg bg-white border-2 border-orange-300 dark:border-rose-600">
-              <div className="flex items-center gap-3 mb-2">
-                {fact.icon}
-                <p>{fact.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <QuickFacts />
 
       {/* Experience Timeline */}
       <section className="mb-16">
