@@ -6,11 +6,12 @@ import {
   PiGraduationCapLight,
   PiBookOpen,
 } from "react-icons/pi";
-import { education, languages, skills } from "./utils/experienceData";
+import { education, languages } from "./utils/experienceData";
 import HeroSection from "./core/HeroSection";
 import MyStory from "./core/MyStory";
 import QuickFacts from "./core/QuickFacts";
 import ExperienceTimeline from "./core/ExperienceTimeline"
+import Skills from "./core/Skills";
 
 const AboutPage: React.FC = () => {
   return (
@@ -28,21 +29,7 @@ const AboutPage: React.FC = () => {
       <ExperienceTimeline />
 
       {/* Skills Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-orange-400">
-          Skills & Technologies
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="text-gray-800 text-center bg-white/5 p-6 rounded-lg bg-white border-2 border-orange-300 dark:border-rose-600 dark:text-orange-400"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
-      </section>
+      <Skills />
 
       {/* Languages */}
       <section className="mb-16">
