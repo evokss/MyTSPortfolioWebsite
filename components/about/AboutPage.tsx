@@ -1,17 +1,17 @@
 "use client";
 
 import React from "react";
-import { IoLanguageOutline } from "react-icons/io5";
 import {
   PiGraduationCapLight,
   PiBookOpen,
 } from "react-icons/pi";
-import { education, languages } from "./utils/experienceData";
+import { education } from "./utils/experienceData";
 import HeroSection from "./core/HeroSection";
 import MyStory from "./core/MyStory";
 import QuickFacts from "./core/QuickFacts";
 import ExperienceTimeline from "./core/ExperienceTimeline"
 import Skills from "./core/Skills";
+import Languages from "./core/Languages";
 
 const AboutPage: React.FC = () => {
   return (
@@ -32,22 +32,7 @@ const AboutPage: React.FC = () => {
       <Skills />
 
       {/* Languages */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6 text-orange-400">Languages</h2>
-        <div className="grid md:grid-cols-3 gap-6 text-gray-800">
-          {languages.map((language, index) => (
-            <div key={index} className="bg-white/5 p-6 rounded-lg bg-white border-2 border-orange-300 dark:border-rose-600 dark:text-orange-400">
-              <div className="flex items-center gap-3">
-                <IoLanguageOutline className="w-5 h-5" />
-                <div>
-                  <p className="font-semibold">{language.name}</p>
-                  <p className="text-sm text-gray-400">{language.level}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Languages />
 
       {/* Education */}
       <section>
