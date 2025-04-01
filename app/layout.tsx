@@ -1,5 +1,5 @@
 import "./styles/globals.css";
-import { Navbar } from "@/components/navigation";
+import Navbar from "@/components/navigation/Navbar";
 
 export const metadata = {
   title: "Eva's Development Space",
