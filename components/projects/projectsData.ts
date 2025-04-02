@@ -13,26 +13,36 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    name: "Portfolio Website",
+    description:
+      "A sleek, minimalistic personal portfolio showcasing my projects and skills as a developer. Built with TypeScript and React for a fast, type-safe frontend. Features responsive design and optimized loading times to deliver a smooth user experience.",
+    technologies: ["TypeScript", "React", "Next.js", "Tailwind"],
+    githubLink: "https://github.com/evokss/MyTSPortfolioWebsite",
+    deployLink: "https://ekoss-ts-portfolio.vercel.app/",
+    imageUrl: "/icons/rocket.png",
+  },
+  {
+    id: 2,
     name: "My Fav Videos",
     description:
-      "A dynamic video grid application, featuring a responsive layout, interactive components, and seamless integration of favorite channels and video details for an engaging user experience.",
+      "A dynamic and user-friendly web application designed to curate and display a personal collection of favorite YouTube videos in an elegant grid layout. Built with React, Next.js and Tailwind CSS for a fully responsive, visually appealing design that adapts effortlessly across devices.",
     technologies: ["React", "Tailwind", "Next.js", "HTML", "CSS"],
     githubLink: "https://github.com/evokss/MyFavVideos",
     deployLink: "https://my-fav-videos.vercel.app/",
     imageUrl: "/icons/movie.png",
   },
   {
-    id: 2,
+    id: 3,
     name: "React Online Market",
     description:
       "A modern e-commerce web application built with React, featuring a catalog of articles/products, user authentication, shopping basket functionality, and user profiles. The application implements a robust state management system combining Redux and custom hooks, with support for internationalization.",
-    technologies: ["React", "React Router v6", "Redux", "HTML", "CSS"],
+    technologies: ["React", "React Router", "Redux", "HTML", "CSS"],
     githubLink: "https://github.com/evokss/ReactOnlineMarket",
     deployLink: "https://react-products-market.vercel.app/",
     imageUrl: "/icons/shop.png",
   },
   {
-    id: 3,
+    id: 4,
     name: "Meme Factory",
     description:
       "Generates random meme images from a preloaded dataset, and view the resulting meme on the screen. The app dynamically updates the displayed meme with each click, providing an interactive experience.",
@@ -42,7 +52,7 @@ export const projects: Project[] = [
     imageUrl: "/icons/troll-face.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "Classic Rock Paper Scissors",
     description:
       "The game dynamically updates the interface with real-time results, tracks player scores persistently using localStorage, and employs logic to simulate computer moves and outcomes.",
@@ -52,7 +62,7 @@ export const projects: Project[] = [
     imageUrl: "/icons/rock-paper-scissors.png",
   },
   {
-    id: 5,
+    id: 6,
     name: "RetroTube",
     description:
       "The project replicates the core design of YouTube's interface, featuring a structured video grid, navigation bar, and user-friendly design elements, all built without the use of JavaScript.",
@@ -62,7 +72,7 @@ export const projects: Project[] = [
     imageUrl: "/icons/youtube.png",
   },
   {
-    id: 6,
+    id: 7,
     name: "Airbnb Experiences Mobile Clone",
     description:
       "A mobile-first app showcasing online experiences with badges for availability and location. It employs reusable components, mapping techniques, and conditional rendering for scalable, responsive design.",
@@ -73,7 +83,7 @@ export const projects: Project[] = [
     imageUrl: "/icons/airbnb.png",
   },
   {
-    id: 7,
+    id: 8,
     name: "ReactTS Insights",
     description:
       "A mobile-first application presenting essential React and TypeScript facts in a responsive and user-friendly interface. It features a structured design with a reusable Navbar and Main components.",
