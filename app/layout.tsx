@@ -2,9 +2,9 @@ import "./styles/globals.css";
 import Navbar from "@/components/navigation/Navbar";
 
 export const metadata = {
-  title: "Eva's Development Space",
+  title: "Eva Koss - Crafting Digital Experiences with React & TypeScript",
   description:
-    "Here is Eva's personal website, showcasing her self-made projects along with a few stories about herself.",
+    "Welcome to my digital portfolio! I'm Eva, a passionate frontend developer specializing in React and TypeScript. Here you'll find my latest projects, technical insights, and a glimpse into my journey in web development.",
   icons: {
     icon: "/icons/rocket.png",
   },
