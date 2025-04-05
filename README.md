@@ -1,6 +1,6 @@
 # Welcome to my personal portfolio repository v.2! 🎉
 
-**Deploy**: [LINK](https://my-ts-portfolio-website.vercel.app/)
+**Deploy**: [LINK](https://ekoss-ts-portfolio.vercel.app/)
 
 This website serves as a showcase of my work, featuring a collection of personal projects, documentation, and applications built using the technologies I love and use daily. It’s a platform where you can learn more about me, explore my skills, and see the results of my passion for web development.
 
