@@ -46,7 +46,7 @@ export const projects: Project[] = [
     name: "Meme Factory",
     description:
       "Generates random meme images from a preloaded dataset, and view the resulting meme on the screen. The app dynamically updates the displayed meme with each click, providing an interactive experience.",
-    technologies: ["React", "Node.js", "HTML", "CSS"],
+    technologies: ["TypeScript", "React", "Node.js", "HTML", "CSS"],
     githubLink: "https://github.com/evokss/MemeFactory",
     deployLink: "https://memes-factory.vercel.app/",
     imageUrl: "/icons/troll-face.png",
