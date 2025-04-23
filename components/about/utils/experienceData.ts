@@ -50,7 +50,7 @@ export const experiences: ExperienceItem[] = [
     id: 1,
     title: "Frontend Developer",
     company: "Freelance",
-    period: "Jul 2023 - Present • 1 yr 8 mos",
+    period: "Jul 2023 - Present",
     description:
       "Specializing in building modern React applications and responsive interfaces for diverse clients, delivering high-performance solutions with a focus on clean code and user experience.",
     responsibilities: [
