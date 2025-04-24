@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoChevronDownOutline } from "react-icons/io5";
 import { experiences } from "../utils/experienceData"
+import { calculateDuration, extractStartDate } from "../utils/dateFormatter"
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const ExperienceTimeline: React.FC = () => {
@@ -30,7 +31,15 @@ const ExperienceTimeline: React.FC = () => {
                     </>
                   )}
                   <span className="hidden sm:inline mx-2">•</span>
-                  <span>{experience.period}</span>
+                  <span>
+                    {experience.period}
+                    {experience.period.includes("Present") && (
+                      <>
+                        {" • "}
+                        {calculateDuration(extractStartDate(experience.period))}
+                      </>
+                    )}
+                  </span>
                 </p>
               </div>
               <button
