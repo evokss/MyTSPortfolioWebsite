@@ -95,7 +95,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 3,
-    title: "Frontend Web Developer",
+    title: "Frontend Developer",
     company: "Itransition Group",
     type: "Internship",
     period: "Mar 2023 - Jun 2023 • 4 mos",
@@ -117,12 +117,14 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 4,
-    title: "Professional development",
-    company: "Career Break",
+    title: "Frontend Developer",
+    company: "Personal projects",
+    type: "Self-employed",
     period: "Jul 2021 - Feb 2023 • 1 yr 8 mos",
     description:
-      "Emigrated from Russia to Georgia while evolving from HTML/CSS specialist to modern frontend developer.",
+      "This intensive learning period transformed my capabilities from markup-focused development to creating sophisticated interactive web applications, backed by solid understanding of modern frontend technologies and principles.",
     responsibilities: [
+      "Transitioned from classical HTML/CSS specialist to modern frontend developer through dedicated self-learning and project work",
       "Advanced from static webpage development to building dynamic web applications using JavaScript, modern frameworks, and state management",
       "Deepened technical expertise in frontend architecture, component-based development, and API integration",
       "Strengthened understanding of web fundamentals including browser rendering, performance optimization, and security best practices",
