@@ -24,7 +24,7 @@ export const projects: Project[] = [
     name: "My Fav Videos",
     description:
       "A dynamic and user-friendly web application designed to curate and display a personal collection of favorite YouTube videos in an elegant grid layout. Built with React, Next.js and Tailwind CSS for a fully responsive, visually appealing design that adapts effortlessly across devices.",
-    technologies: ["JavaScript" ,"React", "Next.js", "HTML", "CSS", "Tailwind"],
+    technologies: ["TypeScript", "React", "Next.js", "HTML", "CSS", "Tailwind"],
     githubLink: "https://github.com/evokss/MyFavVideos",
     deployLink: "https://my-fav-videos.vercel.app/",
     imageUrl: "/icons/movie.png",
