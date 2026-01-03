@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
           {/* Resume download link */}
           <div className="text-center sm:text-left">
             <a
-              href="/Resume_Frontend-React-Developer_Eva-Koss.pdf"
+              href="/Resume_Frontend-React-Engineer_Eva-Koss.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-md text-orange-500 font-bold hover:text-rose-600 dark:text-orange-400"
