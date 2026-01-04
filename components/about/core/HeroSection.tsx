@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
       </div>
       <div className="flex flex-col items-center">
         <a
-          href="/Resume_Frontend-React-Developer_Eva-Koss.pdf"
+          href="/Resume_Frontend-React-Engineer_Eva-Koss.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-white dark:text-gray-100 px-6 py-3 rounded-lg transition-colors duration-200 bg-rose-600 hover:bg-rose-400 dark:hover:bg-rose-700"
