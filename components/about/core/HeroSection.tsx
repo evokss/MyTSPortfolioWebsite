@@ -8,9 +8,10 @@ const HeroSection: React.FC = () => {
       <PageHeading title="About Me" />
       <div className="max-w-3xl mx-auto mb-8">
         <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-          Frontend Developer with 6 years of development experience,
-          passionate about creating robust, visually appealing, and impactful
-          web applications.
+          Frontend Engineer with 6+ years of experience building scalable, high-performance web applications. 
+          Skilled in React, TypeScript, and modern frontend architectures, I deliver maintainable, user-focused solutions while 
+          quickly adapting to new technologies and complex challenges. Driving solutions that align with
+          business goals.
         </p>
       </div>
       <div className="flex flex-col items-center">
