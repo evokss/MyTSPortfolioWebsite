@@ -48,22 +48,23 @@ export const education: EducationItem[] = [
 export const experiences: ExperienceItem[] = [
   {
     id: 1,
-    title: "Frontend Developer",
-    company: "Freelance",
+    title: "Frontend Engineer (React / Next.js)",
+    company: "Independent Contractor",
     period: "Jul 2023 - Present",
     description:
-      "Specializing in building modern React applications and responsive interfaces for diverse clients, delivering high-performance solutions with a focus on clean code and user experience.",
+      "Frontend Engineer specializing in scalable React and Next.js applications, with a strong focus on clean architecture, performance optimization, and responsive, user-centered interfaces.",
     responsibilities: [
-      "Led development of responsive React applications with TypeScript and Next.js, focusing on performance optimization and mobile-first design.",
-      "Built scalable frontend architecture using Redux state management and custom React hooks, reducing codebase complexity.",
-      "Implemented comprehensive UI component libraries with Tailwind CSS and established unit testing practices using Jest.",
-      "Collaborated with design teams using Figma to deliver pixel-perfect interfaces while maintaining clean, maintainable code standards.",
+      "Led end-to-end development of scalable React applications using TypeScript and Next.js, delivering performant, mobile-first user interfaces for production environments.",
+      "Designed and maintained frontend architecture using Redux, custom hooks, and modular component patterns, improving code maintainability and long-term scalability.",
+      "Optimized application performance through code splitting, memoization, and build configuration tuning, contributing to faster load times and smoother user interactions.",
+      "Collaborated closely with designers and product stakeholders to translate Figma designs into pixel-accurate, accessible, and responsive interfaces.",
     ],
     skills: [
       "React",
       "TypeScript",
       "JavaScript (ES6+)",
       "Next.js",
+      "Redux",
       "Tailwind CSS",
       "Git&GitHub",
     ],
