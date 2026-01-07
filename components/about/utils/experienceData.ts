@@ -71,17 +71,17 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 2,
-    title: "React Frontend Developer",
+    title: "Frontend Engineer (React / TypeScript)",
     company: "Y_LAB",
     type: "Internship",
     period: "Aug 2024 - Nov 2024 • 4 mos",
     description:
-      "Y_LAB is a digital transformation company specializing in fintech, e-commerce, and enterprise solutions. Focused on implementing advanced IT projects and business process automation across multiple industries including logistics, telecom, and blockchain.",
+      "Y_LAB is a digital transformation company specializing in fintech, e-commerce, and enterprise solutions across logistics, telecom, and blockchain.",
     responsibilities: [
-      "Built responsive React applications using TypeScript during intensive internship program, focusing on modern development practices.",
-      "Developed feature-rich components implementing Redux state management and REST API integration in training projects.",
-      "Created UI component library with Tailwind CSS following design system principles and best practices.",
-      "Applied modern frontend tooling including Webpack and Babel while learning unit testing and version control workflows in team environment.",
+      "Developed responsive, production-ready React applications with TypeScript, following scalable and maintainable frontend practices.",
+      "Built feature-rich UI components with Redux state management and integrated REST APIs to enable dynamic, interactive application functionality.",
+      "Created a reusable component library using Tailwind CSS aligned with design system principles, improving consistency and accelerating development across projects.",
+      "Collaborated with team members using Git workflows and modern frontend tooling (Webpack, Babel, Jest) to deliver reliable, maintainable code.",
     ],
     skills: [
       "React",
