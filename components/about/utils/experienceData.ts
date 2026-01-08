@@ -101,13 +101,15 @@ export const experiences: ExperienceItem[] = [
     type: "Internship",
     period: "Mar 2023 - Jun 2023 • 4 mos",
     description:
-      "Itransition is a global software development company delivering enterprise-grade solutions with deep technological expertise and market-specific knowledge. Specializes in creating sophisticated corporate and consumer applications tailored to specific business contexts.",
+      "Itransition is a global software development company delivering enterprise-grade solutions and tailored applications for corporate and consumer clients.",
     responsibilities: [
-      "Developed dynamic, responsive web interfaces using HTML5, CSS3, JavaScript ES6, and Bootstrap to deliver seamless user experiences across devices.",
-      "Leveraged advanced DOM manipulation along with Flexbox and Grid to optimize layouts and enhance interactive performance.",
-      "Collaborated effectively using Git and GitHub, integrating Node.js and MongoDB to support scalable, full-stack solutions.",
+      "Developed dynamic, responsive web interfaces using React, JavaScript (ES6+), HTML5, CSS3, and Bootstrap, ensuring cross-device usability and seamless user experiences.",
+      "Collaborated with team members using Git/GitHub, integrating Node.js and MongoDB to support scalable full-stack solutions.",
+      "Contributed to projects leveraging modern frontend workflows, including Babel and REST APIs, producing maintainable and efficient code.",
+      "Assisted in implementing reusable UI components and frontend patterns to accelerate development and improve consistency across applications.",
     ],
     skills: [
+      "React",
       "JavaScript (ES6+)",
       "Node.js",
       "Bootstrap",
