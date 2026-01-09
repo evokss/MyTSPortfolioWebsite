@@ -149,10 +149,12 @@ export const experiences: ExperienceItem[] = [
     type: "Contract",
     period: "Feb 2020 - Jul 2021 • 1 yr 6 mos",
     description:
-      "Scientific-Production Center MAX is a leading developer and integrator of secure cloud computing infrastructure solutions. Provides scalable hardware-software complexes for virtual environments, focusing on protected data storage and deployment of intelligent workspaces for office and development activities.",
+      "Scientific-Production Center MAX is a leading developer and integrator of secure cloud computing infrastructure solutions, providing scalable hardware-software complexes for virtual environments and intelligent workspaces.",
     responsibilities: [
-      "Engineered dynamic single-page applications (SPAs) using advanced HTML/CSS techniques to deliver seamless, user-friendly interfaces.",
-      "Collaborated with cross-functional teams to align design and functionality with project goals.",
+      "Engineered dynamic single-page applications (SPAs) using HTML5, CSS3, and JavaScript, delivering responsive, interactive, and user-friendly interfaces.",
+      "Collaborated with designers and project stakeholders to align UI/UX with business objectives, ensuring timely and high-quality delivery.",
+      "Applied responsive design principles and version control workflows (Git/GitHub) to maintain production-ready code.",
+      "Supported scalable project development by implementing reusable components, modular code structure, and cross-browser compatibility.",
     ],
     skills: [
       "HTML5 & CSS3",
