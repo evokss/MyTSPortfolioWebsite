@@ -4,7 +4,7 @@ export interface ExperienceItem {
   company: string;
   type?: string;
   period: string;
-  description: string;
+  description?: string;
   responsibilities: string[];
   skills: string[];
 }
