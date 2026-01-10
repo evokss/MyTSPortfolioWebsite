@@ -120,17 +120,15 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 4,
-    title: "Frontend Developer",
+    title: "Frontend Engineer",
     company: "Personal projects",
     type: "Self-employed",
     period: "Jul 2021 - Feb 2023 • 1 yr 8 mos",
-    description:
-      "This intensive learning period transformed my capabilities from markup-focused development to creating sophisticated interactive web applications, backed by solid understanding of modern frontend technologies and principles.",
     responsibilities: [
-      "Transitioned from classical HTML/CSS specialist to modern frontend developer through dedicated self-learning and project work",
-      "Advanced from static webpage development to building dynamic web applications using JavaScript, modern frameworks, and state management",
-      "Deepened technical expertise in frontend architecture, component-based development, and API integration",
-      "Strengthened understanding of web fundamentals including browser rendering, performance optimization, and security best practices",
+      "Built multiple dynamic, interactive web applications using React, JavaScript, and modern state management, transitioning from static HTML/CSS to production-quality frontend solutions.",
+      "Developed reusable, modular component architectures and integrated REST APIs, improving code maintainability and scalability.",
+      "Applied performance optimization, responsive design, and security best practices to deliver high-quality, user-focused experiences.",
+      "Maintained GitHub repositories showcasing project architecture, code quality, and modern frontend workflows.",
     ],
     skills: [
       "JavaScript (ES6+)",
