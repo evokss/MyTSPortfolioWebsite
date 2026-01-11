@@ -165,16 +165,17 @@ export const experiences: ExperienceItem[] = [
   },
   {
     id: 6,
-    title: "Microsoft Student Partner",
+    title: "Frontend/Full-Stack Developer - Microsoft Student Partner",
     company: "Microsoft",
     type: "Apprenticeship",
     period: "Apr 2019 - Mar 2020 • 1 yr",
     description:
       "Microsoft is a global technology leader pioneering personal computing software, cloud services, and enterprise solutions since 1975. World's largest software manufacturer, driving innovation across cloud computing, AI, and productivity tools while shaping the future of digital transformation.",
     responsibilities: [
-      "Developed full-stack web applications with JavaScript, React, Python, and Node.js, emphasizing high-quality code.",
-      "Rapidly learned and showcased new Microsoft technologies, leveraging documentation and best practices.",
-      "Contributed to tech lectures, coding challenges, and unit testing to enhance technical skills.",
+      "Developed full-stack applications and websites using React, JavaScript, Python, Node.js, and Django, delivering scalable and maintainable solutions.",
+      "Applied industry best practices and quickly learned Microsoft technologies to enhance code quality, documentation, and overall project reliability.",
+      "Contributed to team knowledge sharing through coding challenges, tech lectures, and unit testing, improving team skills and code robustness.",
+      "Built responsive, cross-platform user interfaces and integrated REST APIs, ensuring high-quality user experience and maintainable application architecture.",
     ],
     skills: [
       "Web Development",
